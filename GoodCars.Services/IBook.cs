@@ -1,6 +1,5 @@
-﻿using System;
+﻿using GoodCars.Data.Models;
 using System.Collections.Generic;
-using System.Text;
 
 namespace GoodCars.Services
 {

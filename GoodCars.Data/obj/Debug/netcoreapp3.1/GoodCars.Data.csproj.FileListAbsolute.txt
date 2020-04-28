@@ -2,7 +2,6 @@ C:\VS\ASP_Net_Core\GoodCars\GoodCars.Data\bin\Debug\netcoreapp3.1\GoodCars.Data.
 C:\VS\ASP_Net_Core\GoodCars\GoodCars.Data\bin\Debug\netcoreapp3.1\GoodCars.Data.dll
 C:\VS\ASP_Net_Core\GoodCars\GoodCars.Data\bin\Debug\netcoreapp3.1\GoodCars.Data.pdb
 C:\VS\ASP_Net_Core\GoodCars\GoodCars.Data\obj\Debug\netcoreapp3.1\GoodCars.Data.csprojAssemblyReference.cache
-C:\VS\ASP_Net_Core\GoodCars\GoodCars.Data\obj\Debug\netcoreapp3.1\GoodCars.Data.csproj.CoreCompileInputs.cache
 C:\VS\ASP_Net_Core\GoodCars\GoodCars.Data\obj\Debug\netcoreapp3.1\GoodCars.Data.AssemblyInfoInputs.cache
 C:\VS\ASP_Net_Core\GoodCars\GoodCars.Data\obj\Debug\netcoreapp3.1\GoodCars.Data.AssemblyInfo.cs
 C:\VS\ASP_Net_Core\GoodCars\GoodCars.Data\obj\Debug\netcoreapp3.1\GoodCars.Data.dll

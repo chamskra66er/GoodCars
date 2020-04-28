@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GoodCars.Data.Models;
+using System;
 
 namespace GoodCars.Services
 {
