@@ -1,0 +1,9 @@
+C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\bin\Debug\netcoreapp3.1\GoodCars.Services.deps.json
+C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\bin\Debug\netcoreapp3.1\GoodCars.Services.dll
+C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\bin\Debug\netcoreapp3.1\GoodCars.Services.pdb
+C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\obj\Debug\netcoreapp3.1\GoodCars.Services.csprojAssemblyReference.cache
+C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\obj\Debug\netcoreapp3.1\GoodCars.Services.csproj.CoreCompileInputs.cache
+C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\obj\Debug\netcoreapp3.1\GoodCars.Services.AssemblyInfoInputs.cache
+C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\obj\Debug\netcoreapp3.1\GoodCars.Services.AssemblyInfo.cs
+C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\obj\Debug\netcoreapp3.1\GoodCars.Services.dll
+C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\obj\Debug\netcoreapp3.1\GoodCars.Services.pdb
