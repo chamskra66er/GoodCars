@@ -7,3 +7,6 @@ C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\obj\Debug\netcoreapp3.1\GoodCars.S
 C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\obj\Debug\netcoreapp3.1\GoodCars.Services.AssemblyInfo.cs
 C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\obj\Debug\netcoreapp3.1\GoodCars.Services.dll
 C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\obj\Debug\netcoreapp3.1\GoodCars.Services.pdb
+C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\bin\Debug\netcoreapp3.1\GoodCars.Data.dll
+C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\bin\Debug\netcoreapp3.1\GoodCars.Data.pdb
+C:\VS\ASP_Net_Core\GoodCars\GoodCars.Services\obj\Debug\netcoreapp3.1\GoodCars.Services.csproj.CopyComplete

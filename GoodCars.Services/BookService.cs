@@ -1,28 +1,42 @@
 ﻿using GoodCars.Data.Models;
 using System;
+using GoodCars.Data;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace GoodCars.Services
 {
     public class BookService : IBook
     {
+        private readonly ApplicationDbContext _context;
+        public BookService(ApplicationDbContext context)
+        {
+            _context = context;
+        }
         public void AddCar(Car car)
         {
-            throw new NotImplementedException();
+            _context.Add(car);
+            _context.SaveChanges();
         }
 
         public void DeleteCar(int id)
         {
-            throw new NotImplementedException();
+            var model = GetById(id);
+            if (model!=null)
+            {
+                _context.Remove(model);
+                _context.SaveChanges();
+            }
+            else
+            {
+                throw new InvalidOperationException("Can't delete car that doesn't exists");
+            }
         }
 
-        public System.Collections.Generic.List<Car> GetAll()
-        {
-            throw new NotImplementedException();
-        }
+        public List<Car> GetAll() => 
+            _context.Cars.ToList();
 
-        public Car GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public Car GetById(int id) =>
+            GetAll().FirstOrDefault(x=>x.Id==id);
     }
 }

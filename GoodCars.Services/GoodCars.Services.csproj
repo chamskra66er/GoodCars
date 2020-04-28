@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GoodCars.Data\GoodCars.Data.csproj" />
+  </ItemGroup>
+
 </Project>
