@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using GoodCars.Services;
 using GoodCars.Data.Models;
+using GoodCars.Web.Models;
 
 namespace GoodCars.Web.Controllers
 {
@@ -35,7 +36,7 @@ namespace GoodCars.Web.Controllers
                 Power = carRequest.Power,
                 Price = carRequest.Price,
                 DateMade = carRequest.DateMade,
-                Mileage = carRequest.Milage
+                Mileage = carRequest.Mileage
             };
             _carService.AddCar(model);
             return Ok($"Car created: {model.Name}");
