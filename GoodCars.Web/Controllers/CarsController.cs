@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using GoodCars.Services;
+using GoodCars.Data.Models;
 
 namespace GoodCars.Web.Controllers
 {
@@ -9,15 +11,35 @@ namespace GoodCars.Web.Controllers
 
         private readonly ILogger<CarsController> _logger;
 
-        public CarsController(ILogger<CarsController> logger)
+        private readonly ICar _carService;
+
+        public CarsController(ILogger<CarsController> logger, ICar carService)
         {
             _logger = logger;
+            _carService = carService;
         }
 
         [HttpGet("/api/cars")]
         public ActionResult GetCars()
         {
-            return Ok("Cars!");
+            var model = _carService.GetAll();
+            return Ok(model);
         }
+        [HttpPost("/api/cars")]
+        public ActionResult CreateCar([FromBody] NewCarRequest carRequest)
+        {
+            var model = new Car
+            { 
+                Title = carRequest.Title,
+                Name = carRequest.Name,
+                Power = carRequest.Power,
+                Price = carRequest.Price,
+                DateMade = carRequest.DateMade,
+                Mileage = carRequest.Milage
+            };
+            _carService.AddCar(model);
+            return Ok($"Car created: {model.Name}");
+        }
+
     }
 }

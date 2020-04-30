@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace GoodCars.Services
 {
-    public interface IBook
+    public interface ICar
     {
         public void AddCar(Car car);
         public void DeleteCar(int id);

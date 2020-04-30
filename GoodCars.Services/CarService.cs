@@ -6,10 +6,10 @@ using System.Linq;
 
 namespace GoodCars.Services
 {
-    public class BookService : IBook
+    public class CarService : ICar
     {
         private readonly ApplicationDbContext _context;
-        public BookService(ApplicationDbContext context)
+        public CarService(ApplicationDbContext context)
         {
             _context = context;
         }
