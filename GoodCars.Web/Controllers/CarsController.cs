@@ -26,9 +26,19 @@ namespace GoodCars.Web.Controllers
             var model = _carService.GetAll();
             return Ok(model);
         }
+        [HttpGet("/api/cars/{id}")]
+        public ActionResult GetCar(int id)
+        {
+            var model = _carService.GetById(id);
+            return Ok(model);
+        }
         [HttpPost("/api/cars")]
         public ActionResult CreateCar([FromBody] NewCarRequest carRequest)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Model state not valid");
+            }
             var model = new Car
             { 
                 Title = carRequest.Title,
@@ -40,6 +50,12 @@ namespace GoodCars.Web.Controllers
             };
             _carService.AddCar(model);
             return Ok($"Car created: {model.Name}");
+        }
+        [HttpDelete("/api/cars/{id}")]
+        public ActionResult DeleteCar(int id)
+        {
+            _carService.DeleteCar(id);
+            return Ok($"Car deleted with id: {id}");
         }
 
     }
