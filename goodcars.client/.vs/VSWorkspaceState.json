@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\services",
+    "\\src\\types"
   ],
-  "SelectedNode": "\\src\\App.vue",
+  "SelectedNode": "\\src\\services\\cars-service.ts",
   "PreviewInSolutionExplorer": false
 }
