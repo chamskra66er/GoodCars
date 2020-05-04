@@ -1,6 +1,11 @@
 <template>
-  <div class="about">
+  <div class="cars-container">
     <h1>Car list view</h1>
+      <div v-if="myCars.length">
+          <div v-for="car in myCars" :key="car.id">
+              {{car.title}} - {{car.name}}
+          </div>
+      </div>
   </div>
 </template>
 
@@ -22,7 +27,8 @@
         }
         created() {
             carService.getAllCars().
-                then(result => this.myCars = result);
+                then(result => this.myCars = result)
+                .catch(err=>console.error(err));
         }
 
     }

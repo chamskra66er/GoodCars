@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\components",
     "\\src\\services",
-    "\\src\\types"
+    "\\src\\types",
+    "\\src\\views"
   ],
   "SelectedNode": "\\src\\services\\cars-service.ts",
   "PreviewInSolutionExplorer": false

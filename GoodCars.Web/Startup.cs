@@ -45,7 +45,6 @@ namespace GoodCars.Web
             {
                 app.UseDeveloperExceptionPage();
             }            
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 
@@ -54,8 +53,6 @@ namespace GoodCars.Web
             .AllowAnyMethod()
             .AllowAnyHeader()
             );
-
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
