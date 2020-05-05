@@ -2,9 +2,10 @@
   <div class="cars-container">
     <h1>Car list view</h1>
       <div v-if="myCars.length">
-          <div v-for="car in myCars" :key="car.id">
-              {{car.title}} - {{car.name}}
-          </div>
+          <car :car="car" 
+               v-for="car in myCars" 
+               :key="car.id">
+          </car>
       </div>
   </div>
 </template>
@@ -13,12 +14,13 @@
     import { Component, Vue } from 'vue-property-decorator';
     import ICar from '@/types/Car';
     import CarService from '../services/cars-service';
+    import Car from '@/components/Car.vue';
 
     const carService = new CarService();
 
     @Component({
         name: 'MyCars',
-        components: {}
+        components: { Car }
     })
     export default class MyCars extends Vue {
         myCars: ICar[] = [];

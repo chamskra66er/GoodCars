@@ -4,6 +4,10 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+//Vue.filter('humanize', function (value: string) {
+    
+//})
+
 new Vue({
   router,
   render: h => h(App)

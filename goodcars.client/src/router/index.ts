@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 import Cars from '../views/Cars.vue'
+import AddCar from '../views/AddCar.vue'
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,11 @@ Vue.use(VueRouter)
       name: 'Cars',
     component:Cars
     //component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+      path: '/add',
+      name: 'AddCar',
+      component:AddCar
   }
 ]
 
