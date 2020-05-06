@@ -1,3 +1,5 @@
+import CarOwner from '@/types/CarOwner';
+
 export default interface ICar {
 	id: number;
 	title: string;
@@ -6,4 +8,5 @@ export default interface ICar {
 	price: string;
 	dateMade: string;
 	mileage: string;
+	//carOwner: CarOwner;
 }

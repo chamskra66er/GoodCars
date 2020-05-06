@@ -3,7 +3,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace GoodCars.Data.Migrations
 {
-    public partial class initialdb : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -31,10 +31,10 @@ namespace GoodCars.Data.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    CarId = table.Column<int>(nullable: false),
                     Period = table.Column<double>(nullable: false),
                     Owner = table.Column<string>(nullable: true),
-                    OwnerContent = table.Column<string>(nullable: true),
-                    CarId = table.Column<int>(nullable: true)
+                    OwnerContent = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -44,7 +44,7 @@ namespace GoodCars.Data.Migrations
                         column: x => x.CarId,
                         principalTable: "Cars",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

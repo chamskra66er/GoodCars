@@ -32,6 +32,7 @@ namespace GoodCars.Web.Controllers
             }
             var model = new CarOwner
             {
+                CarId = ownerRequest.CarId,
                 Period = ownerRequest.Period,
                 Owner = ownerRequest.Owner,
                 OwnerContent = ownerRequest.OwnerContent,                
