@@ -3,6 +3,7 @@ using System;
 using GoodCars.Data;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace GoodCars.Services
 {
@@ -32,11 +33,18 @@ namespace GoodCars.Services
                 throw new InvalidOperationException("Can't delete car that doesn't exists");
             }
         }
+        public Car GetById(int id) =>GetAll().FirstOrDefault(x => x.Id == id);
 
-        public List<Car> GetAll() => 
-            _context.Cars.ToList();
+        public List<Car> GetAll() =>
+            _context.Cars.Include(x=>x.carOwners).ToList();
 
-        public Car GetById(int id) =>
-            GetAll().FirstOrDefault(x=>x.Id==id);
+        public List<CarOwner> GetAllOwners() => _context.CarOwners.ToList();
+
+        public CarOwner GetOwnerById(int id) => GetAllOwners().FirstOrDefault(x => x.Id == id);
+        public void AddCarOwner(CarOwner owner)
+        {
+            _context.Add(owner);
+            _context.SaveChanges();
+        }
     }
 }

@@ -9,5 +9,9 @@ namespace GoodCars.Services
         public void DeleteCar(int id);
         public List<Car> GetAll();
         public Car GetById(int id);
+
+        public void AddCarOwner(CarOwner owner);
+        public List<CarOwner> GetAllOwners();
+        public CarOwner GetOwnerById(int id);
     }
 }

@@ -40,13 +40,14 @@ namespace GoodCars.Web.Controllers
                 return BadRequest("Model state not valid");
             }
             var model = new Car
-            { 
+            {
                 Title = carRequest.Title,
                 Name = carRequest.Name,
                 Power = carRequest.Power,
                 Price = carRequest.Price,
                 DateMade = carRequest.DateMade,
-                Mileage = carRequest.Mileage
+                Mileage = carRequest.Mileage,
+
             };
             _carService.AddCar(model);
             return Ok($"Car created: {model.Name}");
