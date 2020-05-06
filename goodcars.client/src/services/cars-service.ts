@@ -11,4 +11,8 @@ export default class CarService {
         let result = await axios.post(`${this.API_URL}/cars/`, car)
         return result.data;
     }
+    public async deleteCar(id: number) {
+        let result = await axios.delete(`${this.API_URL}/cars/${id}`)
+        return result.data;
+    }
 }
