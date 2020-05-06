@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace GoodCars.Data.Models
 {
     public class Car
@@ -10,6 +12,7 @@ namespace GoodCars.Data.Models
         public string Price { get; set; }
         public string DateMade { get; set; }
         public string Mileage { get; set; }
+        public IEnumerable<CarOwner> carOwners { get; set; }
 
     }
 }

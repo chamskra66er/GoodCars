@@ -78,7 +78,7 @@ namespace GoodCars.Data.Migrations
             modelBuilder.Entity("GoodCars.Data.Models.CarOwner", b =>
                 {
                     b.HasOne("GoodCars.Data.Models.Car", "Car")
-                        .WithMany()
+                        .WithMany("carOwners")
                         .HasForeignKey("CarId");
                 });
 #pragma warning restore 612, 618

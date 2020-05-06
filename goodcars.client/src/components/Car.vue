@@ -31,7 +31,7 @@ export default class Car extends Vue {
         car!: ICar;
         async deleteCar(id: number) {
             await carService.deleteCar(id);
-            this.$emit('deleted');
+            this.$emit('deleted', id);
         }
 }
 </script>

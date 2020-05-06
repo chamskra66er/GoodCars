@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GoodCars.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200428141439_Initial")]
-    partial class Initial
+    [Migration("20200506053036_initial db")]
+    partial class initialdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -80,7 +80,7 @@ namespace GoodCars.Data.Migrations
             modelBuilder.Entity("GoodCars.Data.Models.CarOwner", b =>
                 {
                     b.HasOne("GoodCars.Data.Models.Car", "Car")
-                        .WithMany()
+                        .WithMany("carOwners")
                         .HasForeignKey("CarId");
                 });
 #pragma warning restore 612, 618
